@@ -9,7 +9,7 @@ package com.mycompany.plugue.entidades;
  *
  * @author rodol
  */
-public abstract class Usuario {
+public abstract class Usuario2 {
     
     private int id;
     
@@ -19,7 +19,7 @@ public abstract class Usuario {
     
     private String senha;
     
-    public Usuario(){
+    public Usuario2(){
         
     }
     
