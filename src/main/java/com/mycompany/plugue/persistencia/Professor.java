@@ -14,13 +14,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 /**
  *
- * @author rodol
+ * @author Milena
  */
 @Entity
-public class Aluno extends Usuario{
+@PrimaryKeyJoinColumn(name="id")
+public class Professor extends Usuario{
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -28,10 +30,11 @@ public class Aluno extends Usuario{
     private Long id;
     
     @Column
-    private String curso;
+    private String paginaPessoal;
     
-    @ManyToMany(mappedBy="alunos")
-    private List<Projeto> projetos;
+    @ManyToMany(mappedBy="ideias")
+    private List<Ideia> ideias;
+    
 
     @SuppressWarnings("override")
     public Long getId() {
@@ -43,22 +46,34 @@ public class Aluno extends Usuario{
         this.id = id;
     }
     
-    public String getCurso() {
-        return curso;
+    public String getPaginaPessoal() {
+        return paginaPessoal;
     }
 
-    public void setCurso(String curso) {
-        this.curso = curso;
+    public void setPaginaPessoal(String paginaPessoal) {
+        this.paginaPessoal = paginaPessoal;
     }
     
-    public List<Projeto> getProjetos() {
-        return projetos;
+    public void cadastrarProjeto(){
+        
+    }
+    
+    public void excluirProjeto(){
+        
+    }
+    
+    public void atualizarProjeto(){
+        
+    } 
+    
+    public List<Ideia> getIdeias() {
+        return ideias;
+    }
+    
+    public void setIdeias(List<Ideia> ideias) {
+        this.ideias = ideias;
     }
 
-    public void setAlunos(List<Projeto> projetos) {
-        this.projetos = projetos;
-    }
-    
     @Override
     public void criarUsuario() {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -93,18 +108,6 @@ public class Aluno extends Usuario{
     public void interessar() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
-    public void cadastrarIdeia(){
-        
-    }
-    
-    public void excluirIdeia(){
-        
-    }
-    
-    public void atualizarIdeia(){
-        
-    }    
 
     @Override
     public int hashCode() {
@@ -116,19 +119,19 @@ public class Aluno extends Usuario{
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Aluno)) {
+        if (!(object instanceof Professor)) {
             return false;
         }
-        Aluno other = (Aluno) object;
+        Professor other = (Professor) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
     }
-
+    
     @Override
     public String toString() {
-        return "com.mycompany.plugue.persistencia.Aluno[ id=" + id + " ]";
+        return "com.mycompany.plugue.persistencia.Professor[ id=" + id + " ]";
     }
     
 }

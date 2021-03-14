@@ -5,7 +5,6 @@
  */
 package com.mycompany.plugue.persistencia;
 
-import com.mycompany.plugue.persistencia.Professor;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Column;
@@ -19,10 +18,10 @@ import javax.persistence.ManyToMany;
 
 /**
  *
- * @author rodol
+ * @author Milen
  */
 @Entity
-public class Ideia implements Serializable {
+public class Projeto implements Serializable{
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -39,20 +38,20 @@ public class Ideia implements Serializable {
     private String descricao;
     
     @ManyToMany
-    @JoinTable(name = "professor_ideia", 
-            joinColumns = @JoinColumn(name = "fk_ideia"), 
-            inverseJoinColumns = @JoinColumn(name = "fk_ideia"))
-    private List<Professor> professores;
+    @JoinTable(name = "aluno_projeto",
+               joinColumns = @JoinColumn(name = "fk_projeto"),
+               inverseJoinColumns = @JoinColumn(name = "fk_aluno"))
+    private List<Aluno> alunos;
 
     public Long getId() {
         return id;
     }
-
+    
     public void setId(Long id) {
         this.id = id;
     }
     
-        public String getTitulo() {
+    public String getTitulo() {
         return titulo;
     }
 
@@ -76,12 +75,12 @@ public class Ideia implements Serializable {
         this.descricao = descricao;
     }
     
-    public List<Professor> getProfessores() {
-        return professores;
+    public List<Aluno> getAlunos() {
+        return alunos;
     }
-
-    public void setProfessores(List<Professor> professores) {
-        this.professores = professores;
+    
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
     }
 
     @Override
@@ -94,10 +93,10 @@ public class Ideia implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Ideia)) {
+        if (!(object instanceof Projeto)) {
             return false;
         }
-        Ideia other = (Ideia) object;
+        Projeto other = (Projeto) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -106,7 +105,7 @@ public class Ideia implements Serializable {
 
     @Override
     public String toString() {
-        return "com.mycompany.plugue.persistencia.Ideia[ id=" + id + " ]";
+        return "com.mycompany.plugue.persistencia.Projeto[ id=" + id + " ]";
     }
     
 }

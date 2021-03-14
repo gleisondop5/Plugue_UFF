@@ -4,6 +4,10 @@
   <persistence-unit name="persistencia">
     <class>com.mycompany.plugue.persistencia.Aluno</class>
     <class>com.mycompany.plugue.persistencia.Ideia</class>
+<<<<<<< HEAD
+=======
+    <class>com.mycompany.plugue.persistencia.Usuario</class>
+>>>>>>> c66888f2a4a386836cea4cf2cf9ec482cbb9c9a2
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/plugue"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>

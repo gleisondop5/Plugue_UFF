@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com\mycompany\plugue\JAXRSConfiguration.class
 com\mycompany\plugue\persistencia\Ideia.class
 com\mycompany\plugue\entidades\Ideia2.class
@@ -7,3 +8,5 @@ com\mycompany\plugue\resources\JavaEE8Resource.class
 com\mycompany\plugue\entidades\Projeto.class
 com\mycompany\plugue\entidades\Usuario.class
 com\mycompany\plugue\persistencia\Aluno.class
+=======
+>>>>>>> c66888f2a4a386836cea4cf2cf9ec482cbb9c9a2
