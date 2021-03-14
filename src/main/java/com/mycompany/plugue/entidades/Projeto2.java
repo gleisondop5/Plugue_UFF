@@ -9,7 +9,7 @@ package com.mycompany.plugue.entidades;
  *
  * @author rodol
  */
-public class Projeto {
+public class Projeto2 {
     
     private String titulo;
     
@@ -17,7 +17,7 @@ public class Projeto {
     
     private String areaInteresse;
     
-    public Projeto(){
+    public Projeto2(){
         
     }
 
