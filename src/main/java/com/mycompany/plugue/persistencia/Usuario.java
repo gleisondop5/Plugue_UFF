@@ -11,7 +11,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType. JOINED)
 public abstract class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
