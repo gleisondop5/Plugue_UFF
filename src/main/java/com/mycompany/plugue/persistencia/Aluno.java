@@ -5,19 +5,22 @@
  */
 package com.mycompany.plugue.persistencia;
 
-import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 /**
  *
  * @author rodol
  */
 @Entity
-public class Aluno implements Serializable {
+public class Aluno {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -26,6 +29,10 @@ public class Aluno implements Serializable {
     
     @Column
     private String curso;
+    
+    @ManyToMany
+    @JoinTable(name = "aluno_projeto", joinColumns = @JoinColumn(name = "fk_aluno"), inverseJoinColumns = @JoinColumn(name = "fk_projeto"))
+    private List<Aluno> alunos;
 
     public Long getId() {
         return id;
@@ -43,11 +50,54 @@ public class Aluno implements Serializable {
         this.curso = curso;
     }
     
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+    
+    /*@Override
+    public void criarUsuario() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void acessarConta() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void desconectarConta() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void excluirUsuario() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void resetarSenha() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void atualizarusuario() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void interessar() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }*/
+    
     public void cadastrarIdeia(){
         
     }
     
-    public void ecluirIdeia(){
+    public void excluirIdeia(){
         
     }
     

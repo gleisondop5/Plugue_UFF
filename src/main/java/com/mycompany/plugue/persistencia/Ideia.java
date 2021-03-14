@@ -5,12 +5,15 @@
  */
 package com.mycompany.plugue.persistencia;
 
+import com.mycompany.plugue.entidades.Professor;
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -32,6 +35,9 @@ public class Ideia implements Serializable {
     
     @Column
     private String descricao;
+    
+    @ManyToMany(mappedBy="ideias")
+    private List<Professor> professores;
 
     public Long getId() {
         return id;
@@ -63,6 +69,14 @@ public class Ideia implements Serializable {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+    
+    public List<Professor> getProfessores() {
+        return professores;
+    }
+
+    public void setProfessores(List<Professor> professores) {
+        this.professores = professores;
     }
 
     @Override

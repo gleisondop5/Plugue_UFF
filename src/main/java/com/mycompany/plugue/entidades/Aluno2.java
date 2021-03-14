@@ -9,11 +9,11 @@ package com.mycompany.plugue.entidades;
  *
  * @author rodol
  */
-public class Aluno extends Usuario {
+public class Aluno2 extends Usuario {
     
     private String curso;
     
-    public Aluno(){
+    public Aluno2(){
       super();  
     }
 
