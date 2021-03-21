@@ -1,21 +1,43 @@
 package com.mycompany.plugue.dao;
 import com.mycompany.plugue.persistencia.Ideia;
+import com.mycompany.plugue.utils.JPAUtil;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 
 /**
  * @author Milena
  */
 public class IdeiaDAO {
     
-    private EntityManager em;
+    private EntityManager entityManager;
     
-    public void newIdeia(Ideia ideia){}
+    public void newIdeia(Ideia ideia){
+        entityManager = JPAUtil.getEM();
+        EntityTransaction transaction = entityManager.getTransaction();
+        // Start a resource transaction
+        transaction.begin();
+        // Make an instance managed and persistent.
+        entityManager.persist(ideia);
+        // Commit the current resource transaction, writing any unflushed changes to the database.
+        transaction.commit();
+        entityManager.close();
+    }
     
-    public void updateIdeia(Ideia ideia) {}
+    public void updateIdeia(Ideia ideia) {
+        
+    }
     
-    public Ideia getIdea() {
-        return null;
+    public Ideia getIdea(String id) {
+        entityManager = JPAUtil.getEM();
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        
+        Ideia ideia = entityManager.find(Ideia.class, id);
+        transaction.commit();
+        entityManager.close();
+        
+        return ideia;
     }
     
     public List<Ideia> getIdeas(){
