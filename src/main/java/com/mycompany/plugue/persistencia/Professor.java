@@ -5,6 +5,7 @@
  */
 package com.mycompany.plugue.persistencia;
 
+import com.mycompany.plugue.dao.ProfessorDAO;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -76,7 +77,13 @@ public class Professor extends Usuario{
 
     @Override
     public void criarUsuario() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Professor professor = new Professor();
+        professor.setNome("João");
+        professor.setContato("joão@gmail.com");
+        professor.setSenha("1234");
+        professor.setPaginaPessoal("joao.com.br");
+        ProfessorDAO professorDao = new ProfessorDAO();
+        professorDao.criarUsuario(professor);
     }
 
     @Override

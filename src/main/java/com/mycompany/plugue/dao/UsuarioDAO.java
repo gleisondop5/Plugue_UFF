@@ -11,18 +11,12 @@ package com.mycompany.plugue.dao;
  */
 public interface UsuarioDAO {
     
-    public void criarUsuario();
-    
+    public void criarUsuario(Object object);
     public void acessarConta();
-    
     public void desconectarConta();
-    
     public void excluirUsuario();
-    
     public void resetarSenha();
-    
     public void atualizarusuario();
-    
     public void interessar();
     
 }
