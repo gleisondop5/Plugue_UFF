@@ -5,6 +5,8 @@
     <class>com.mycompany.plugue.persistencia.Aluno</class>
     <class>com.mycompany.plugue.persistencia.Ideia</class>
     <class>com.mycompany.plugue.persistencia.Usuario</class>
+    <class>com.mycompany.plugue.persistencia.Professor</class>
+    <class>com.mycompany.plugue.persistencia.Projeto</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/plugue"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
