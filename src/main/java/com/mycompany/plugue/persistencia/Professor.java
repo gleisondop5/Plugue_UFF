@@ -32,7 +32,7 @@ public class Professor extends Usuario{
     @Column
     private String paginaPessoal;
     
-    @ManyToMany(mappedBy="ideias")
+    @ManyToMany(mappedBy="professores")
     private List<Ideia> ideias;
     
 
