@@ -4,6 +4,7 @@ import com.mycompany.plugue.utils.JPAUtil;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 
 /**
  * @author Milena
@@ -41,6 +42,11 @@ public class IdeiaDAO {
     }
     
     public List<Ideia> getIdeas(){
-        return null;
+        String sqlQuery = "SELECT e FROM Ideia e";
+        entityManager = JPAUtil.getEM();
+        Query query = entityManager.createQuery(sqlQuery);
+        List<Ideia> listaIdeias = query.getResultList();
+        entityManager.close();
+        return listaIdeias;
     }
 }

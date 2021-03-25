@@ -1,12 +1,13 @@
 C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\dao\IdeiaDAO.java
-C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\JAXRSConfiguration.java
+C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\services\IdeiasResource.java
+C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\services\JAXRSConfiguration.java
 C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Projeto.java
 C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Ideia.java
-C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\ideia.java
-C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\dao\ProfessorDAO.java
 C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Usuario.java
 C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\resources\JavaEE8Resource.java
 C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Aluno.java
 C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\utils\JPAUtil.java
-C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\dao\UsuarioDAO.java
 C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Professor.java
+C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\dao\ProfessorDAO.java
+C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\utils\aluno.java
+C:\Users\Milen\OneDrive\Documentos\GitHub\Plugue_UFF\src\main\java\com\mycompany\plugue\dao\UsuarioDAO.java
