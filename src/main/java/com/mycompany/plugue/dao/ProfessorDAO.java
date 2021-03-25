@@ -5,47 +5,58 @@
  */
 package com.mycompany.plugue.dao;
 
+import com.mycompany.plugue.utils.JPAUtil;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 
 /**
  *
  * @author rodol
  */
 public class ProfessorDAO implements UsuarioDAO{
+    
+    private EntityManager entityManager;
 
     @Override
-    public void criarUsuario() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void criarUsuario(Object objet) {
+        entityManager = JPAUtil.getEM();
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        entityManager.persist(objet);
+        transaction.commit();
+        entityManager.close();
     }
 
     @Override
-    public void acessarConta() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void acessarConta(String login, String senha) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void desconectarConta() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void excluirUsuario() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void resetarSenha() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void atualizarusuario() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void interessar() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
     
 }

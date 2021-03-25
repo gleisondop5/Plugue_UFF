@@ -5,8 +5,10 @@
  */
 
 import com.mycompany.plugue.dao.IdeiaDAO;
+import com.mycompany.plugue.dao.ProfessorDAO;
 import com.mycompany.plugue.persistencia.Ideia;
 import com.mycompany.plugue.persistencia.Professor;
+import com.mycompany.plugue.persistencia.Projeto;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -35,7 +37,7 @@ public class ideia extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        /****IDEIA****
         List<Professor> list = new ArrayList<>();
         Ideia ideia = new Ideia();
         ideia.setAreaInteresse("Ciências");
@@ -44,7 +46,19 @@ public class ideia extends HttpServlet {
         ideia.setProfessores(list);
         
         IdeiaDAO ideiaDao = new IdeiaDAO();
-        ideiaDao.newIdeia(ideia);
+        ideiaDao.newIdeia(ideia);*/
+        
+        /****PROFESSOR****
+        Professor professor = new Professor();
+        List<Ideia> ideias = new ArrayList();
+        professor.setNome("Milena Veríssimo");
+        professor.setContato("milena@gmail.com");
+        professor.setPaginaPessoal("milena.com.br");
+        professor.setSenha("****");
+        professor.setIdeias(ideias);
+        
+        ProfessorDAO professorDao = new ProfessorDAO();
+        professorDao.criarUsuario(professor);*/
         
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
