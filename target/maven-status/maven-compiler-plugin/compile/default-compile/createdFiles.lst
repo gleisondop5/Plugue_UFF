@@ -5,6 +5,7 @@ com\mycompany\plugue\persistencia\Projeto.class
 com\mycompany\plugue\persistencia\Professor.class
 com\mycompany\plugue\persistencia\Usuario.class
 com\mycompany\plugue\utils\JPAUtil.class
+com\mycompany\plugue\dao\AlunoDao.class
 com\mycompany\plugue\dao\IdeiaDAO.class
 com\mycompany\plugue\resources\JavaEE8Resource.class
 com\mycompany\plugue\dao\ProfessorDAO.class

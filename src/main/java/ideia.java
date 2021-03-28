@@ -6,6 +6,8 @@
 
 import com.mycompany.plugue.dao.IdeiaDAO;
 import com.mycompany.plugue.dao.ProfessorDAO;
+import com.mycompany.plugue.dao.AlunoDao;
+import com.mycompany.plugue.persistencia.Aluno;
 import com.mycompany.plugue.persistencia.Ideia;
 import com.mycompany.plugue.persistencia.Professor;
 import com.mycompany.plugue.persistencia.Projeto;
@@ -48,7 +50,7 @@ public class ideia extends HttpServlet {
         IdeiaDAO ideiaDao = new IdeiaDAO();
         ideiaDao.newIdeia(ideia);*/
         
-        /****PROFESSOR****
+        /******PROFESSOR****************
         Professor professor = new Professor();
         List<Ideia> ideias = new ArrayList();
         professor.setNome("Milena Veríssimo");
@@ -59,6 +61,18 @@ public class ideia extends HttpServlet {
         
         ProfessorDAO professorDao = new ProfessorDAO();
         professorDao.criarUsuario(professor);*/
+        
+        Aluno aluno = new Aluno();
+        List<Projeto> projeto = new ArrayList();
+        aluno.setNome("Gleison");
+        aluno.setCurso("gleison@gmail.com");
+        aluno.setSenha("****");
+        aluno.setProjetos(projeto);
+        
+        AlunoDao alunoDao = new AlunoDao();
+        alunoDao.criarUsuario(aluno);
+        
+        
         
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {

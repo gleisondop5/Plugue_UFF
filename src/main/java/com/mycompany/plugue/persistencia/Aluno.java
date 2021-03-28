@@ -18,11 +18,10 @@ import javax.persistence.ManyToMany;
  * @author rodol
  */
 @Entity
-public class Aluno extends Usuario{
+public class Aluno extends Usuario {
 
     private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
     @Column
@@ -53,7 +52,7 @@ public class Aluno extends Usuario{
         return projetos;
     }
 
-    public void setAlunos(List<Projeto> projetos) {
+    public void setProjetos(List<Projeto> projetos) {
         this.projetos = projetos;
     }
     
