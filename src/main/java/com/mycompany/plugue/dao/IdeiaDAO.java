@@ -13,7 +13,7 @@ public class IdeiaDAO {
     
     private EntityManager entityManager;
     
-    public void newIdeia(Ideia ideia){
+    public void novaIdeia(Ideia ideia){
         entityManager = JPAUtil.getEM();
         EntityTransaction transaction = entityManager.getTransaction();
         // Start a resource transaction

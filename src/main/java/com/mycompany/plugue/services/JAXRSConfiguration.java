@@ -1,4 +1,4 @@
-package com.mycompany.plugue;
+package com.mycompany.plugue.services;
 
 import java.util.Set;
 import javax.ws.rs.ApplicationPath;

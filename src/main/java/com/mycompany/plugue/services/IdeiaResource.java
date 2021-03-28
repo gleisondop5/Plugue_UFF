@@ -18,6 +18,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.enterprise.context.RequestScoped;
+import javax.json.JsonObject;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.core.MediaType;
@@ -27,30 +28,28 @@ import javax.ws.rs.core.MediaType;
  *
  * @author Milen
  */
-@Path("ideias")
-@RequestScoped
+@Path("/ideia")
 public class IdeiaResource {
 
-    public IdeiaResource() {
-    }
-
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public List<Ideia> listaIdeias () {
         IdeiaDAO ideiaDao = new IdeiaDAO();
         return ideiaDao.getIdeas();
     }
     
     @POST
-    public void novaIdeia(@FormParam("area") String area, @FormParam("descricao") String descricao, @FormParam("titulo") String titulo) {
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void cadastrarIdeia(JsonObject event) {
         List<Professor> list = new ArrayList<>();
         Ideia ideia = new Ideia();
-        ideia.setAreaInteresse(area);
-        ideia.setDescricao(descricao);
-        ideia.setTitulo(titulo);
+        ideia.setAreaInteresse(event.getString("area"));
+        ideia.setDescricao(event.getString("descricao"));
+        ideia.setTitulo(event.getString("titulo"));
         ideia.setProfessores(list);
         
         IdeiaDAO ideiaDao = new IdeiaDAO();
-        ideiaDao.newIdeia(ideia);
+        ideiaDao.novaIdeia(ideia);
     }
 }
