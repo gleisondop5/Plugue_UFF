@@ -40,7 +40,7 @@ public class Ideia implements Serializable {
     @ManyToMany
     @JoinTable(name = "professor_ideia", 
             joinColumns = @JoinColumn(name = "fk_ideia"), 
-            inverseJoinColumns = @JoinColumn(name = "fk_ideia"))
+            inverseJoinColumns = @JoinColumn(name = "fk_professor"))
     private List<Professor> professores;
 
     public Long getId() {
