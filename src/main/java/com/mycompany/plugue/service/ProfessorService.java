@@ -34,26 +34,15 @@ public class ProfessorService {
     @Context
     private UriInfo context;
 
-    /**
-     * Creates a new instance of ProfessorService
-     */
     public ProfessorService() {
     }
 
-    /**
-     * Retrieves representation of an instance of com.mycompany.plugue.service.ProfessorService
-     * @return an instance of java.lang.String
-     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String getJson() {
         return "teste";
     }
 
-    /**
-     * PUT method for updating or creating an instance of ProfessorService
-     * @param content representation for the resource
-     */
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     public void salvar(JsonObject event) {
