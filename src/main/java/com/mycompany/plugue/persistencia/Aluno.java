@@ -83,7 +83,7 @@ public class Aluno extends Usuario{
     }
 
     @Override
-    public void atualizarusuario() {
+    public void atualizarUsuario() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

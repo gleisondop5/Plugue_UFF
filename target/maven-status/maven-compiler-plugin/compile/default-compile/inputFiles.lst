@@ -1,12 +1,13 @@
 C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\JAXRSConfiguration.java
 C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\dao\UsuarioDAO.java
 C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Projeto.java
-C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\dao\ProfessorDAO.java
-C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Ideia.java
 C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\resources\JavaEE8Resource.java
 C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Usuario.java
 C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\utils\JPAUtil.java
 C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\dao\IdeiaDAO.java
 C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Professor.java
-C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Aluno.java
 C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\ideia.java
+C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\dao\ProfessorDAO.java
+C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Ideia.java
+C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\service\ProfessorService.java
+C:\Users\rodol\OneDrive\햞ea de Trabalho\workspaces\Plugue\Plugue_UFF\src\main\java\com\mycompany\plugue\persistencia\Aluno.java

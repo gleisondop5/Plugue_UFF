@@ -9,4 +9,5 @@ com\mycompany\plugue\dao\IdeiaDAO.class
 com\mycompany\plugue\resources\JavaEE8Resource.class
 com\mycompany\plugue\dao\ProfessorDAO.class
 ideia.class
+com\mycompany\plugue\service\ProfessorService.class
 com\mycompany\plugue\persistencia\Aluno.class

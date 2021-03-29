@@ -73,7 +73,7 @@ public abstract class Usuario implements Serializable {
     
     public abstract void resetarSenha();
     
-    public abstract void atualizarusuario();
+    public abstract void atualizarUsuario();
     
     public abstract void interessar();
 

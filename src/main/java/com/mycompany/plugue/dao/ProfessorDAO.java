@@ -5,6 +5,7 @@
  */
 package com.mycompany.plugue.dao;
 
+import com.mycompany.plugue.persistencia.Professor;
 import com.mycompany.plugue.utils.JPAUtil;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -18,18 +19,18 @@ public class ProfessorDAO implements UsuarioDAO{
     private EntityManager entityManager;
 
     @Override
-    public void criarUsuario(Object objet) {
+    public void criarUsuario(Object object) {
         entityManager = JPAUtil.getEM();
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        entityManager.persist(objet);
+        entityManager.persist(object);
         transaction.commit();
         entityManager.close();
     }
 
     @Override
     public void acessarConta(String login, String senha) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        entityManager = JPAUtil.getEM();
     }
 
     @Override
@@ -47,9 +48,23 @@ public class ProfessorDAO implements UsuarioDAO{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void atualizarusuario() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Professor atualizarProfessor(Long id, Professor novoProfessor) {
+        entityManager = JPAUtil.getEM();
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
+        Professor professor = entityManager.find(Professor.class, id);
+        
+        professor.setNome(novoProfessor.getNome());
+        professor.setContato(novoProfessor.getContato());
+        professor.setSenha(novoProfessor.getSenha());
+        professor.setPaginaPessoal(novoProfessor.getPaginaPessoal());
+        professor.setIdeias(novoProfessor.getIdeias());
+        entityManager.persist(novoProfessor);
+        transaction.commit();
+        entityManager.close();
+        
+        return novoProfessor;
+        
     }
 
     @Override

@@ -21,8 +21,6 @@ public interface UsuarioDAO {
     
     public void resetarSenha();
     
-    public void atualizarusuario();
-    
     public void interessar();
     
 }

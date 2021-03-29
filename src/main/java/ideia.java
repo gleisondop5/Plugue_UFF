@@ -40,7 +40,7 @@ public class ideia extends HttpServlet {
         /****IDEIA****
         List<Professor> list = new ArrayList<>();
         Ideia ideia = new Ideia();
-        ideia.setAreaInteresse("Ciências");
+        ideia.setAreaInteresse("Matemática");
         ideia.setDescricao("Qualquer coisa");
         ideia.setTitulo("Titulo");
         ideia.setProfessores(list);
@@ -51,7 +51,7 @@ public class ideia extends HttpServlet {
         /****PROFESSOR****
         Professor professor = new Professor();
         List<Ideia> ideias = new ArrayList();
-        professor.setNome("Milena Veríssimo");
+        professor.setNome("Milena Crivella");
         professor.setContato("milena@gmail.com");
         professor.setPaginaPessoal("milena.com.br");
         professor.setSenha("****");
